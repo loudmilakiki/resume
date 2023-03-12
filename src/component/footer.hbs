@@ -1,5 +1,3 @@
- {{#with footer}}
-
       <footer>
         <div>
         {{#with social}}
@@ -10,13 +8,12 @@
         </div>
         <br>
         <div>
-           <em>Copyright by {{../header/name/firstname}} {{../header/name/lastname}}</em>
+           <em>Copyright by {{firstname}} {{lastname}}</em>
         </div>
         <br/>
         <div>
-          <em>
-            {{../header/adress}}
-          </em>
+          <address>
+            {{adress}}
+          </address>
         </div>
       </footer>
-    {{/with}}

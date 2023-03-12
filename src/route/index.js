@@ -233,7 +233,6 @@ router.get('/work', function (req, res) {
               name: 'Resume',
               url: 'https://resume.com.ua/',
               about: 'Full Stack Projects for Beginners',
-              stackAmount: 5,
               stacks: [
                 {
                   name: 'react.js',
@@ -245,7 +244,6 @@ router.get('/work', function (req, res) {
                   name: 'Node.js',
                 },
               ],
-              awardAmount: 3,
               awards: [
                 {
                   name: ' On the successful completion of these modules, the students will be awarded e-certificates',
@@ -254,6 +252,8 @@ router.get('/work', function (req, res) {
                   name: 'Award for there work in multiple technologies',
                 },
               ],
+              awardAmount: 3,
+              stackAmount: 5,
             },
           ],
         },

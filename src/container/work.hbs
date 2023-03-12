@@ -65,32 +65,32 @@
                        <br>
                        <br>
 
-                          {{#each stacks}}
-                            <li>
-                               <div>{{name}}</div>
-                            </li>
-                          {{/each}}
+                       <div>
+                            <ul>
+                              {{#each stacks}}
+                                   <li>{{name}}</li>                               
+                              {{/each}}
+                            </ul>
+                       </div>
 
                         <br>
                         <br>
-
-                        <li>
-                          <dev>
+                       
+                        <div>
                             <em>Project awards({{awardAmount}})</em>
-                          </dev>
-                        </li>
+                        </div>
 
                         <br>
                         <br>
 
-                       <ul>
-                         {{#each awards}}
-                           <li>
-                             <div>{{name}}</div>
-                           </li>
-                         {{/each}}
-                       </ul>
-                    </li>
+                        <div>
+                          <ul>
+                            {{#each awards}}
+                               <li>{{name}}</li>
+                            {{/each}}
+                           </ul>
+                       </div>
+                      </li>
                     {{/each}}
                   </ul>
                </li>
