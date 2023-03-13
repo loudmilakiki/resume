@@ -1,0 +1,170 @@
+<div>
+  {{#with person}}
+    <div>
+      <h1>{{name}}</h1>
+    </div>
+    <hr />
+    <br />
+    <div>Age: <a>{{age}}</a></div>
+
+    <br />
+
+    <div>Gender: <a>{{gender}}</a></div>
+
+    <br />
+
+    <div>
+      {{#with address}}
+        <div>
+          <address>{{street}}, {{city}}, {{state}}, {{zip}}, {{country}}</address>
+        </div>
+      {{/with}}
+    </div>
+
+    <hr />
+    <br />
+
+    <section>
+      <div>
+        <ul>
+          {{#each education}}
+            <li>Degree: <a>{{degree}}</a></li>
+            <li>Major: <a>{{major}}</a></li>
+            <li>University: <a>{{university}}</a></li>
+            <li>Gradution Year: 2012<a
+              >{{gradutionYear}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+
+    <hr />
+    <br />
+    <section>
+    {{#each workExperience}}
+      <div>
+        <h2>Work Experiance</h2>
+      </div>
+      <div>
+        <li>{{company}}</li>
+        <li>{{title}}</li>
+
+        <br />
+
+        <div>
+          {{startDate}}
+          -
+          {{endDate}}
+        </div>
+
+        <br />
+
+        <div>
+          <ul>
+            {{#if responsibilities}}
+              <p>Developed new features for Google Maps</p>
+              <p>Worked on improving search algorithms</p>
+            {{/if}}
+          </ul>
+        </div>
+
+        <div>
+          <h3>{{year_founded}}</h3>
+        </div>
+        <div><a>{{industry}}</a></div>
+
+        <br />
+
+        {{#each employees}}
+          <div>Employees: <b>{{name}}</b></div>
+          <div>Position: <b>{{position}}</b></div>
+          <div>Department: <b>{{department}}</b></div>
+
+          <br />
+
+          <ul>
+            <div>
+              {{#each projects}}
+                <div>Projects: <b>{{name}}</b></div>
+                {{#with description}}
+                  Developing new software platform
+                {{/with}}
+                <div>{{status}}</div>
+
+                <br />
+                <div>
+                  {{#each teams}}
+                    <div><h3>Teams:</h3></div>
+                    <div>{{team_name}}</div>
+                    <div>
+                      {{#with team_leader}}
+                        <div>{{name}}</div>
+                        <div>{{title}}
+                          <div>{{email}}</div>
+                        </div>
+                      {{/with}}
+                    </div>
+
+                    <br />
+
+                    <div>
+                      {{#each team_members}}
+                        <div>{{name}}</div>
+                        <div>{{title}}</div>
+                        <div>{{email}}</div>
+
+                        <br />
+
+                        <div>
+                          {{#with skills}}
+                            <a>Java, Python, SQL</a>
+                          {{/with}}
+                        </div>
+
+                        <br />
+
+                        <div>
+                          {{#each projects}}
+                            <div>
+                              <b>Projects</b>
+                              <div>
+                                <a>{{name}}</a>
+                              </div>
+                              <div>
+                                <a>{{description}}</a>
+                              </div>
+
+                              <br />
+
+                              {{#with technologies}}
+                                <div><b>Technologies:
+                                  </b></div>
+                                Java, Spring Framework
+                              {{/with}}
+                            </div>
+
+                            <br />
+                             <section>
+                            <div>
+                              {{#each team_members}}  
+                              <div>{{name}}</div>  
+                              <div>{{title}}</div>
+                              </div>                                                      
+                            </section>
+                              {{/each}}
+                            </div>
+                          {{/each}}
+                        </div>
+                      {{/each}}
+                    </div>
+                  {{/each}}
+                </div>
+              {{/each}}
+            </div>
+          </ul>
+        {{/each}}
+      </div>
+    {{/each}}
+    </section>
+  {{/with}}
+</div>
