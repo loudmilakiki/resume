@@ -558,12 +558,13 @@ router.get('/program1', function (req, res) {
 })
 
 // ================================================================
+
 // ================================================================
 
-router.get('/web', function (req, res) {
+router.get('/web1', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
-  res.render('web', {
-    layout: 'basic',
+  res.render('web1', {
+    layout: 'basicc',
 
     web: {
       languages: [
