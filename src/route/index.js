@@ -206,7 +206,7 @@ router.get('/work', function (req, res) {
   res.render('work', {
     // ↙ сюди вводимо JSON дані
 
-    layout: 'big',
+    layout: 'basics',
 
     page: {
       title: 'Resume | Work',
@@ -272,7 +272,7 @@ router.get('/work', function (req, res) {
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    layout: 'person',
+    layout: 'basics',
     person: {
       name: 'Emma Johnson',
       age: 32,
@@ -375,7 +375,7 @@ router.get('/person', function (req, res) {
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
-    layout: 'bio',
+    layout: 'basics',
 
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
@@ -475,7 +475,7 @@ router.get('/bio', function (req, res) {
 router.get('/program1', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program1', {
-    layout: 'program1',
+    layout: 'basics',
 
     program: {
       excursion: {
@@ -561,10 +561,10 @@ router.get('/program1', function (req, res) {
 
 // ================================================================
 
-router.get('/web1', function (req, res) {
+router.get('/webb', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
-  res.render('web1', {
-    layout: 'basicc',
+  res.render('webb', {
+    layout: 'basics',
 
     web: {
       languages: [
