@@ -117,7 +117,7 @@
               <p class="text-lowercase">{{text}}</p>
               <div>
               {{#with button}}
-                <a href="#" class="btn btn-link">{{text}} - {{url}}</a>
+                <button class="btn btn-link"> <a href="{{url}}"></a>{{text}}</a>
               {{/with}}
               </div>
               <br>
@@ -126,7 +126,11 @@
                     <div class="card-body">
                         <ul>
                           {{#each list_name}}                       
-                             <li><p class="btn btn-link">{{text}} - {{url}}</p></li>
+                             <li>
+                              <button class="btn btn-link">
+                              <a href="{{url}}">{{text}}</a>
+                              </button>
+                              </li>
                           {{/each}}
                         </ul>
                     </div>
