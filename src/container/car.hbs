@@ -1,11 +1,13 @@
-<div>
+<div class='m-5'>
   <h1>{{make}}</h1>
   <h3>{{model}}</h3>
   <a>({{year}})</a>
   <a>{{color}}</a>
 </div>
-<hr />
-<div>
+
+<hr class='m-3' />
+
+<div class='m-5'>
   <h3>Features</h3>
   {{#with features}}
     <b>Interior:</b>
@@ -134,8 +136,8 @@
     </div>
   {{/with}}
 </div>
-<hr />
-<div>
+<hr class='m-5' />
+<div class='m-5'>
   <h3>Engine</h3>
   {{#with engine}}
     <li>Type: {{type}}</li>
@@ -151,8 +153,8 @@
     </lu>
   {{/with}}
 </div>
-<hr />
-<div>
+<hr class='m-5' />
+<div class='m-5'>
   <h3>Fuel economy</h3>
   {{#with fuel_economy}}
     <li>City: {{city}}</li>
@@ -160,8 +162,8 @@
     <li>Combined: {{combined}}</li>
   {{/with}}
 </div>
-<hr />
-<div>
+<hr class='m-5' />
+<div class='m-5'>
   <h3>Price</h3>
   {{#with price}}
     <li>Base: {{base}}</li>

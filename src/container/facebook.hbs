@@ -1,4 +1,4 @@
-<div>
+<div class="m-5">
   <h1>{{name}}</h1>
   <h3>Users</h3>
   {{#each users}}
@@ -18,7 +18,7 @@
         </ul>
       {{/each}}
     </ul>
-    <hr />
+    <hr class="m-5">
     <ul>
       <h3>Groups</h3>
       {{#each groups}}
@@ -34,32 +34,33 @@
       {{/each}}
     </ul>
 
-    <ul>
+    <ul class="m-5">
       {{> info}}
       {{#each friends}}
-        <ul>
+        <ul class="mx-5">
          {{> info}}
           {{#each mutual_friends}}
             <ul>
               <br />
               {{> info}}
-              <ul>
-                <br />
+              <ul class="m-5">
+               
                 {{#each mutual_friends}}
-                  <br />
+                 
                  {{> info}}
                 {{/each}}
               </ul>
             </ul>
           {{/each}}
-          <br />
+          <div class="m-5">
           {{#each groups}}
             <ul>
              {{> interest}}
               <ul>
                 {{#each members}}
-                  <br />
+                  <div class="m-5">
                  {{> info}}
+                 </div>
                 {{/each}}
               </ul>
             </ul>
@@ -68,4 +69,5 @@
       {{/each}}
     </ul>
   {{/each}}
+  </div>
 </div>
