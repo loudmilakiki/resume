@@ -134,8 +134,8 @@
           <div class="col-2 flex-column">
             <ul class="nav">
                {{#each this}}
-               <li>
-                 <a href="{{link}}">{{text}}</a>
+               <li>       
+                  <a{{#if @last}}disabled{{/if}} href="{{link}}">{{text}}</a>
                </li>
                {{/each}}
             </ul>

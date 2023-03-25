@@ -1,0 +1,22 @@
+<div class='m-5'>
+  <ul>
+    {{#each list}}
+      <li>
+        <button{{#if @first}} disabled {{/if}}> {{name}} - {{@index}}</button>
+        
+      </li>
+    {{/each}}
+    <br>
+    <br>
+
+
+     {{#each user}}
+      <li>
+        {{@key}}
+        {{@index}}
+       {{this}}
+        
+      </li>
+    {{/each}}
+  </ul>
+</div>

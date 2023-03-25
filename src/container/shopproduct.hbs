@@ -1,0 +1,65 @@
+<main class='m-5'>
+  <nav>
+    <div class='row'>
+      <div class='col-12'>
+
+        <div class='card'>
+          <section>
+            {{#with navigation}}
+              <div class='nav nav-tabs'> 
+                <div class="coi-6 m-5">      
+                <h1 class='ms-3'>{{Logo}}</h1> 
+                </div>
+                   <div class="col-6"> 
+                      
+                {{#each links}} 
+                        
+                    <a
+                      href='{{href}}'
+                      target='_blank'
+                      class='nav-link m-2  '
+                    >{{text}}</a>
+                  
+                {{/each}}
+              
+                <p class='m-5 '>Disabled</p>
+               </div>  
+              </div>
+            {{/with}}
+          </section>
+        </div>
+
+        <div>
+
+          <div class='col-7'>
+            <div class='row'>
+              <div class='col-12'>
+
+                <ol class='breadcrumb'>
+                {{#each breadcrumb}}           
+                    <li class='breadcrumb-item me-4 mt-5'>                     
+                      <a{{#if @last}}null{{/if}} href='{{url}}'>{{name}}</a>
+                    </li>
+                {{/each}}
+                </ol>
+
+                <div>
+                    <div>
+                        <div class="table">
+                            {{#with productData}}
+                              <img class="card-img-top" src="{{img}}">
+                            {{/with}}
+                        </div>
+                        
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </nav>
+</main>
