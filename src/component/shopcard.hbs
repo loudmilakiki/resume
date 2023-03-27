@@ -1,0 +1,33 @@
+<section>
+  <div class='row gx-3 gx-4'>
+
+    {{#each cards}}
+      <section class='col-4'>
+        <div class='card'>
+
+          {{#with this}}
+            <div class='nav-item'>
+              <img class='card-img-top' src='{{image}}' />
+              <div>
+                <h4 class='card-title m-3'>
+                  {{title}}
+                </h4>
+                <p class='m-3'>{{description}}</p>
+              </div>
+              <div class='m-3'>
+                {{#if isHot includeZero=true}}<button
+                    class='badge rounded-pill text-bg-primary'
+                  >isHot</button>{{/if}}
+                {{#if idNew includeZero=true}}<button
+                    class='badge rounded-pill text-bg-warning'
+                  >idNew</button>{{/if}}
+              </div>
+            </div>
+          {{/with}}
+
+        </div>
+      </section>
+    {{/each}}
+  </div>
+
+</section>

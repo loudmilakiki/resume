@@ -1,0 +1,12 @@
+<div class='alert bg-success text-light text-center'>
+  <h2 class='mb-3'>{{title}}</h2>
+  <p class='mb-0'>{{description}}</p>
+  <div class='nav-item'>
+    {{#each buttons}}
+      <a
+        class='btn btn-primary me-1 mt-4'
+        href='{{link}}'
+      >{{text}}</a>
+    {{/each}}
+  </div>
+</div>
