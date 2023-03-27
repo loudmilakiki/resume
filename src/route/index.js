@@ -1597,7 +1597,7 @@ router.get('/shopproduct', function (req, res) {
           isHot: false,
           idNew: false,
         },
-      ],
+      ], 
     },
 
     service: {

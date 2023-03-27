@@ -1,31 +1,32 @@
 <main class='p-5'>
   <div class='row'>
     <div class='col-12'>
-
-      <div class='card'>
-      <section>
-        {{#with navigation}}
-          <div class='nav nav-tabs py-8'>
-            <h1 class='ms-3'>{{Logo}}</h1>
-
-            {{#each links}}
-                       
-              <div class='nav-item ms-0'>
-                <a
-                  href='{{href}}'
-                  target='_blank'
-                  class='nav-link m-2'
-                >{{text}}</a>               
-              </div>   
-                   
-            {{/each}}
-             <p class="m-3 ">Disabled</p>
+     
+     <div>
+      {{#with navigation}}
+        <div class='card pt-3 pb-2 px-2 mb-4'>
+           <nav class='row'>
+            <div class='col-6'>
+               <h1 class='m-3'>{{Logo}}</h1>
             </div>
-      
-        {{/with}}
-        </section>
-      </div>
 
+          <div class='col-6 text-end'>
+            {{#each links}}
+              <a
+                 href='{{href}}'
+                class='btn btn-link m-3'
+                  >{{text}}</a>
+        {{/each}}
+        <a
+          href='#'
+          class='btn btn-link disabled'
+        >Disabled</a>
+
+      </div>
+    </nav>
+  </div>
+{{/with}}
+  </div>
 
      <section>
       <div class='text-center py-5'>
@@ -37,13 +38,13 @@
                 <div class='card text-bg-dark'>
                   <div class='card-header'>{{title}}
                     {{#if isTop includeZero=true}}<button
-                        class='btn btn-success'
+                        class='badge rounded-pill text-bg-success'
                       >{{isTop}}</button>
                     {{/if}}
 
                     {{#if isNew includeZero=true}}
                       <button
-                        class='btn btn-danger'
+                        class='badge rounded-pill text-bg-danger'
                       >{{isNew}}</button>
                     {{/if}}
                   </div>
@@ -95,20 +96,28 @@
       <section>
           
           {{#with subscribe}}
-          <div class='alert bg-dark text-light'> 
          
-            <h2 class='m-3 '>{{header}}</h2>
+            <div class="row">
+             
+          <div class='card alert text-bg-dark text-light'> 
+           <div class="row">
+            <div class="col-6">
+            <h2 class='m-3 mb-3'>{{header}}</h2>
             <p class="m-3 ">{{description}}</p>
-            <div class="text-end">
+           </div>
+            <div class="text-end col-6">
               {{#each buttons}}
                 <a
-                  class="btn btn-primary me-2 mb-5 px-5" href="{{link}}"
+                  class="btn btn-primary m-3 my-5" href="{{link}}"
                 >{{text}}</a>
               {{/each}}
+              
+              </div>
+            </div>
             </div>
             </div>
           {{/with}}
-        </div>
+       
       </section>
 
       <hr class="m-3">
@@ -128,22 +137,23 @@
       </section>
 
        <hr class="m-5">
-       <section>
-        <div class="card-footer row col-10">
+           </div>
+  </div>
+</main>
+       <footer>
+        
+        <div class="card-footer row col-10 m-3">
         {{#each footer}}
           <div class="col-2 flex-column">
             <ul class="nav">
                {{#each this}}
                <li>       
-                  <a{{#if @last}}disabled{{/if}} href="{{link}}">{{text}}</a>
+                  <a class="nav-link" {{#if @last}}disabled{{/if}} href="{{this.link}}">{{this.text}}</a>
                </li>
                {{/each}}
             </ul>
           </div>
         {{/each}}
         </div>
-       </section>
+       </footer>
 
-    </div>
-  </div>
-</main>
