@@ -1,0 +1,30 @@
+<section>
+  <div class='text-center py-5'>
+    {{#with newsOtherBlock}}
+      <h2>{{title}}</h2>
+      <div class='row gx-4 gy-3'>
+        {{#each cards}}
+          <section class='col-3'>
+            <div class='card text-bg-dark'>
+              <div class='card-header'>{{title}}
+                {{#if isTop includeZero=true}}<button
+                    class='badge rounded-pill text-bg-success'
+                  >{{isTop}}</button>
+                {{/if}}
+
+                {{#if idNew includeZero=true}}
+                  <button
+                    class='badge rounded-pill text-bg-danger'
+                  >{{idNew}}</button>
+                {{/if}}
+              </div>
+              <div class='card-body'>
+                <p>{{description}}</p>
+              </div>
+            </div>
+          </section>
+        {{/each}}
+      </div>
+    {{/with}}
+  </div>
+</section>

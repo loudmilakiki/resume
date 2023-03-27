@@ -1,29 +1,4 @@
-<main class='m-5'>
-
-  {{#with navigation}}
-     <div class='card pt-3pb-2 px-2 mb-4'>
-    <nav class='row'>
-
-      <div class='col-6'>
-        <h1 class='m-3'>{{Logo}}</h1>
-      </div>
-
-      <div class='col-6 text-end'>
-        {{#each links}}
-          <a
-            href='{{href}}'
-            class='btn btn-link m-3'
-          >{{text}}</a>
-        {{/each}}
-        <a
-          href='#'
-          class='btn btn-link disabled'
-        >Disabled</a>
-      </div>
-
-    </nav>
-     </div>
-  {{/with}}
+<main class='m-5'> 
 
      <ol class='breadcrumb'>
   {{#each breadcrumb}}           
@@ -264,22 +239,7 @@
 
        <hr class="col-12 my-5">
 
-              <footer>
-        
-        <div class="card-footer row col-10 m-3">
-        {{#each footer}}
-          <div class="col-2 flex-column">
-            <ul class="nav">
-               {{#each this}}
-               <li>       
-                  <a class="nav-link" {{#if @last}}disabled{{/if}} href="{{this.link}}">{{this.text}}</a>
-               </li>
-               {{/each}}
-            </ul>
-          </div>
-        {{/each}}
-        </div>
-       </footer>
+
 
 
 </main>

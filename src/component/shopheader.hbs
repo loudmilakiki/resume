@@ -1,19 +1,26 @@
-<div class='card pt-3pb-2 px-2 mb-4'>
-  <nav class='row'>
+<div>
+  {{#with navigation}}
+    <div class='card pt-3pb-2 px-2 mb-4'>
+      <nav class='row'>
 
-    <div class='col-6'>
-      <h1 class='m-3'>{{Logo}}</h1>
+        <div class='col-6'>
+          <h1 class='m-3'>{{Logo}}</h1>
+        </div>
+
+        <div class='col-6 text-end'>
+          {{#each links}}
+            <a
+              href='{{href}}'
+              class='btn btn-link m-3'
+            >{{text}}</a>
+          {{/each}}
+          <a
+            href='#'
+            class='btn btn-link disabled'
+          >Disabled</a>
+        </div>
+
+      </nav>
     </div>
-
-    <div class='col-6 text-end'>
-      {{#each links}}
-        <a
-          href='{{href}}'
-          class='btn btn-link m-3'
-        >{{text}}</a>
-      {{/each}}
-      <a href='#' class='btn btn-link disabled'>Disabled</a>
-    </div>
-
-  </nav>
+  {{/with}}
 </div>

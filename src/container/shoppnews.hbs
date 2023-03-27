@@ -1,0 +1,42 @@
+ <body class="row m-3">
+    <div class="m-5">
+    {{> breadcrump}}
+    </div>
+
+ <div class='col-12'>
+    {{#with newsData}}
+       <div class='mb-5 g-5'>
+         
+           <div class='nav-item'>
+              <img class='card-img-top' src='{{photo}}' />
+           </div>
+
+           <section class="g-5 mb-5">
+            {{#with head}}
+            <div class="title-header">
+               <h3 class="mt-5">{{heading}}</h3>
+               <p>{{description}}</p>
+            </div>
+            {{/with}}
+           </section>
+
+           <section class="mb-5">
+             {{#each body}}
+             <ul class="nav">
+                <h5>{{title}}</h5>
+                <a>{{text}}</a>
+             </ul>
+             {{/each}}
+           </section>
+           </div>
+    {{/with}}
+ </div>
+
+  <hr class="m-5">
+
+     {{> shoppost}}
+
+     {{> shopaction}}
+</body>
+
+<hr class="m-5">
