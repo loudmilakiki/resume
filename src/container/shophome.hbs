@@ -13,14 +13,14 @@
                 <div class='card text-bg-dark'>
                   <div class='card-header'>{{title}}
                     {{#if isTop includeZero=true}}<button
-                        class='badge rounded-pill text-bg-success'
-                      >{{isTop}}</button>
+                        class='badge rounded-pill text-bg-success text-uppercase'
+                      >top</button>
                     {{/if}}
 
                     {{#if isNew includeZero=true}}
                       <button
-                        class='badge rounded-pill text-bg-danger'
-                      >{{idNew}}</button>
+                        class='badge rounded-pill text-bg-danger text-uppercase'
+                      >new</button>
                     {{/if}}
                   </div>
                   <div class='card-body'>
@@ -42,16 +42,16 @@
             <ul class="d-flex list-unstyled">
             
            {{#each tabs}}
-          <li>
-            <div class="nav-link {{#if isActive}} active {{/if}} {{#if isDisabled}} disabled {{/if}}">
-            {{text}}       
-            </div>
+            <li>
+               <a href="#" class="nav-link {{#if isDisabled includeZero=true}} disabled {{/if}} {{#if isActive includeZero=true}} active {{/if}}">
+                  {{text}}       
+               </a>
             </li>          
            {{/each}}
 
            </ul>
           </nav>
-                               <section>
+          <section>
             <div class='row gx-3 gx-4'>
           
             {{#each cards}}
@@ -60,22 +60,25 @@
                  
              {{#with this}}
             
-            
+          
                <div class='nav-item'>
                    <img class='card-img-top' src='{{image}}' />
                    <div>
                    <h4 class="card-title m-3">
                     {{title}}
                    </h4>
+                   
+                    <div>
+                      <span class="badge rounded-pill {{#if isHot includeZero=true}} text-bg-danger text-uppercase {{/if}}">hot</span>
+                      <span class="badge rounded-pill {{#if isNew includeZero=true}} text-bg-warning text-uppercase {{/if}}">new</span>
+                    </div>
+
+
+                   <div>
                    <p class="m-3">{{description}}</p>
                    </div>
-                   <div class="m-3">
-                   {{#if isHot includeZero=true}}<button class="badge rounded-pill text-bg-primary">isHot</button>{{/if}}
-                   {{#if idNew includeZero=true}}<button class="badge rounded-pill text-bg-warning">idNew</button>{{/if}}
-                   </div>
-               </div>
-               
-               
+              
+                 
              {{/with}}
         
              </div>

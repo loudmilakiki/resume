@@ -1,15 +1,15 @@
-     <footer>   
-        <div class="card-footer row col-10 m-3">
-        {{#each footer}}
-          <div class="col-2 flex-column">
-            <ul class="nav">
-               {{#each this}}
-               <li>       
-                  <a class="nav-link" {{#if @last}}disabled{{/if}} href="{{this.link}}">{{this.text}}</a>
-               </li>
-               {{/each}}
-            </ul>
-          </div>
-        {{/each}}
-        </div>
-       </footer>
+<footer class='m-2'>
+  <div class='row col-10'>
+    {{#each footer}}
+      <div class='col-2 flex-column'>
+        <ul class='nav'>
+          {{#each this}}
+            <li class='nav-link disabled'>
+              <a class="nav-link {{#if @last}}disabled{{/if}}" href="{{this.link}}">{{this.text}}</a>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/each}}
+  </div>
+</footer>
