@@ -1,0 +1,23 @@
+{{#with subscribe}}
+
+  <div class='row'>
+
+    <div class='card alert text-bg-dark text-light'>
+      <div class='row'>
+        <div class='col-6'>
+          <h2 class='m-3 mb-3'>{{header}}</h2>
+          <p class='m-3'>{{description}}</p>
+        </div>
+        <div class='text-end col-6'>
+          {{#each buttons}}
+            <a
+              class='btn btn-primary m-3 my-5'
+              href='{{link}}'
+            >{{text}}</a>
+          {{/each}}
+
+        </div>
+      </div>
+    </div>
+  </div>
+{{/with}}
