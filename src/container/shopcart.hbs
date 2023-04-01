@@ -28,53 +28,7 @@
        </div>
 
   {{#each goodsBlock}}
-    <div class='card m-2'>
-      <div class='card-body'>
-        <div class='row col-12'>
-
-          {{#with this}}
-            <div class='col-2'>
-              <img class='card-img-top' src='{{image}}' />
-            </div>
-
-            <div class='col-2'>
-              <h3>{{name}}</h3>
-              <p>{{description}}</p>
-            </div>
-
-            <div class='col-2 m-5'>
-              {{#with price}}
-                <div>
-                  <a>{{title}}</a>
-                  <a>{{value}}</a>
-                </div>
-              {{/with}}
-            </div>
-
-            <div class='col-2 m-5'>
-              <h5>{{amount}}</h5>
-            </div>
-
-          {{/with}}
-
-          <div class="col-2">
-
-         {{#each buttons}}
-           <div class="nav-item m-5">
-             <div>
-               <button 
-               {{#if isPrimary}} class="btn btn-primary" {{/if}}
-               {{#if isDanger}} class="btn btn-outline-danger" {{/if}}
-               >{{text}}</button>
-            </div>
-          </div>
-         {{/each}}
-
-             </div>
-
-        </div>
-      </div>
-    </div>
+     {{> cartGoodsItem}}
   {{/each}}
 
        <div class="col-12">
