@@ -1,0 +1,80 @@
+<main class='m-3 p-4'>
+
+  <div class='row col-12'>
+
+    {{#with header}}
+
+      <div class='col-2'>
+        <h1>{{title}}</h1>
+      </div>
+
+      <div class='col-10 text-end'>
+        {{#with button}}
+          <div class='g-2 pt-3 pb-3'>
+            <a
+              href='{{link}}'
+              class='btn btn-outline-secondary'
+            >{{text}}</a>
+          </div>
+        {{/with}}
+      </div>
+
+    {{/with}}
+
+  </div>
+
+       <div class="col-12">
+        <hr class="col-12 gy-5 my-5">
+       </div>
+
+  {{#each goodsBlock}}
+     {{> cartGoodsItem}}
+  {{/each}}
+
+       <div class="col-12">
+        <hr class="col-12 gy-5 my-5">
+       </div>
+
+
+  {{#with total}}
+    <div class="row col-12">
+
+        <div class="col-4">
+            <div class="m-3">
+           <h2>{{title}}</h2>
+           <h1>{{amount}}</h1>
+           <a><small>{{delivery}}</small></a>
+        </div>
+        </div>
+
+        <div class="col-8 text-center">
+           {{#each buttons}}
+              <div class="m-4">
+                <a href="{{link}}" {{#if isSuccess}} class="btn btn-success"{{/if}}
+                {{#if isOutline}} class="btn btn-outline-success" {{/if}}
+                >{{text}}</a>
+              </div>
+           {{/each}}
+        </div>
+
+    </div>
+  {{/with}}
+  
+ <div class="col-12">
+   <hr class="col-12 gy-5 my-5">
+ </div>
+
+    {{> shopcards}}
+
+  <div class="col-12">
+     <hr class="col-12 gy-5 my-5">
+  </div>
+   
+  {{> subscribe}}
+   
+     <div class="col-12">
+     <hr class="col-12 gy-5 my-5">
+  </div>
+
+     
+</main>
