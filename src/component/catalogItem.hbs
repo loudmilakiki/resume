@@ -1,0 +1,46 @@
+         <div class=" col-6">
+        <div class="card">
+                     <div class='nav-item'>
+                <img class='card-img-top' src='{{img}}' />
+              
+                <div class='m-3'>
+                  {{#if isHot}}<button
+                      class='badge rounded-pill text-bg-primary'
+                    >Hot</button>{{/if}}
+                  {{#if isNew}}<button
+                      class='badge rounded-pill text-bg-warning'
+                    >New</button>{{/if}} 
+                   {{#if isFast}}<button class="badge rounded-pill text-bg-success">Fast</button>{{/if}}       
+                   {{#if isFree}}<button class="badge rounded-pill text-bg-info" >Free</button>{{/if}}
+                   <h6 class="mt-3">{{name}}</h6>
+
+                   <div class="col-12">
+                    <h6>{{review.amount}}
+                    {{review.text}}</h6>
+                   </div>
+
+                   <div>{{price}}</div>
+                   <div>{{delivery}}</div>
+
+                   {{#each buttons}}
+                     <a href="{{link}}" {{#if isPrimary}} class="btn btn-primary text-light m-2"{{/if}}
+                     {{#if isSecondary}} class="btn btn-secondary text-light m-2" {{/if}}
+                     >{{text}}</a>
+                   {{/each}}
+
+                   {{#each characteristics}}
+                     <div>
+                        {{#with this}}
+                         <li>{{title}}:{{value}}</li>
+
+                        {{/with}}
+                     </div>
+                   {{/each}}
+
+                </div>
+
+                   
+            
+              </div>
+                   </div>
+    </div>

@@ -1,0 +1,150 @@
+<main class="m-3 p-4">
+
+  <ol class='breadcrumb'>
+    {{#each breadcrumb}}
+      <li class='breadcrumb-item me-4 mt-5'>
+        <a{{#if @last}}null{{/if}} href='{{url}}'>{{name}}</a>
+      </li>
+    {{/each}}
+  </ol>
+
+  <h1 class="mt-5">{{header}}</h1>
+
+  <div class="row col-12">
+    {{#each sortBlock}}
+      <div class="col-3">
+        {{#with this}}
+         {{> placeholder}}
+        {{/with}}
+      </div>
+    {{/each}}
+  </div>
+
+
+<div class="row col-12">
+
+  <div class="card col-4 mt-3">
+    
+    {{#with filterBlock}}
+     
+        {{#with sellers}}
+          <h6 class="mt-2">{{title}}</h6>
+         {{#each list}}
+            <div>
+              {{#with this}}
+                <label class="form-check-label">
+                <input name="list" type="checkbox" class="form-check-input"> {{value}}
+                </label>
+              {{/with}}
+            </div>
+            
+         {{/each}}
+ 
+        {{/with}}
+
+        
+
+         {{#with brands}}
+           <h6>{{title}}</h6>
+
+           <div>
+            {{#with input}}
+            <div>
+              <input placeholder="{{placeholder}}" class="form-control" >
+              </div>
+            {{/with}}
+           </div>
+
+           <div>
+            {{#each options}}
+            <div>
+              {{#with this}}
+                <label class="form-check-label">
+                <input name="list" type="checkbox" class="form-check-input"> {{value}}
+                </label>
+              {{/with}}
+            </div>
+            {{/each}}
+           </div>
+
+         {{/with}}
+
+         <hr>
+
+         {{#with price}}
+          <h6>{{title}}</h6>
+          <div class="row col-12">
+            {{#with range}}
+
+              <div class="card col-3 m-2">
+                <a>{{from}}</a>
+              </div>
+
+              <div class="card col-4 m-2">
+                <a>{{to}}</a>
+              </div>
+
+            {{/with}}
+
+              <div class="col-3 m-1">
+                {{#with button}}
+                  <a href="{{link}}" class="btn btn-outline-secondary">{{text}}</a>
+                {{/with}}
+              </div>
+            <hr>
+          </div>
+          
+         {{/with}}
+
+        
+
+         {{#each filterList}}
+           <div>
+            {{#with this}}
+             <h6>{{title}}</h6>
+
+          <div>
+            {{#each options}}
+            <div>
+              {{#with this}}
+                <label class="form-check-label">
+                <input name="list" type="checkbox" class="form-check-input"> {{value}}
+                </label>
+              {{/with}}
+            </div>
+            {{/each}}
+           </div>
+
+            {{/with}}
+    <hr>
+           </div>
+      
+         {{/each}}
+
+
+    
+    {{/with}}
+
+  </div>
+
+ 
+ <div class="row col-8 mt-3">
+
+    {{#each goodsList}}
+        
+        {{#with this}}
+          {{> catalogItem}}
+        {{/with}}
+   
+    {{/each}}
+ </div>
+
+</div>
+
+{{> shopaction}}
+
+<div class="col-12">
+    <hr class="gy-5 my-5">
+</div>
+
+</main>
