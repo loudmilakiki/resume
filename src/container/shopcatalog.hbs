@@ -14,7 +14,14 @@
     {{#each sortBlock}}
       <div class="col-3">
         {{#with this}}
-         {{> placeholder}}
+        <div>
+        <select class='form-select form-select-sm'>
+          <option>{{placeholder}}</option>
+            {{#each options}}
+               <option value='{{value}}'>{{text}}</option>
+            {{/each}}
+          </select>
+         </div>
         {{/with}}
       </div>
     {{/each}}
@@ -140,8 +147,9 @@
  </div>
 
 </div>
-
+<div class="mt-2 me-2">
 {{> shopaction}}
+</div>
 
 <div class="col-12">
     <hr class="gy-5 my-5">

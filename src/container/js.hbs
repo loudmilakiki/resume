@@ -1,84 +1,126 @@
-<div>
-  <h1>{{name}}</h1>
-  <p>{{description}}</p>
-</div>
-<hr />
-<br />
-<div>
-  {{#with history}}
-    <li>{{year}}</li>
-    <li>{{founder}}</li>
-  {{/with}}
-</div>
-<hr />
-<br />
-<div>
-  {{#each types}}
-    <li><a>{{this}}</a></li>
-  {{/each}}
-</div>
-<hr />
+<main class='m-5'>
+  <div>
+    <h1>{{name}}</h1>
+    <p>{{description}}</p>
+  </div>
+  <hr class='p-3' />
 
-<div>
-  <h3>Sintax</h3>
-  {{#with syntax}}
-    <ul>
-      <b>Virables:</b>
-      {{#each variables}}
+  <div class='card m-3'>
+    {{#with history}}
+      <div class='m-3'>
+        <li>{{year}}</li>
+        <li>{{founder}}</li>
+      </div>
+    {{/with}}
+  </div>
+
+  <div class='card m-3'>
+    {{#each types}}
+      <div class='ms-3'>
         <li><a>{{this}}</a></li>
-      {{/each}}
-      <br />
-      <b>Functions:</b>
-      {{#each functions}}
-        <li><a>{{this}}</a></li>
-      {{/each}}
-      <br />
-      <b>Conditionals:</b>
-      {{#each conditionals}}
-        <li><a>{{this}}</a></li>
-      {{/each}}
-      <br />
-      <b>Loops:</b>
-      {{#each loops}}
-        <li><a>{{this}}</a></li>
-      {{/each}}
-      <br />
-      <b>Classes:</b>
-      {{#each classes}}
-        <li><a>{{this}}</a></li>
-      {{/each}}
-    </ul>
-  {{/with}}
-</div>
-<hr />
-<br />
-<div>
-  <b>Features:</b>
-  {{#each features}}
-    <li>{{this}}</li>
-  {{/each}}
-</div>
-<hr />
-<div>
-  <b>Libraries</b>
-  {{#each libraries}}
-    <li>{{this}}</li>
-  {{/each}}
-</div>
-<hr />
-<div>
-  <b>Tools:</b>
-  {{#each tools}}
-    <li>{{this}}</li>
-  {{/each}}
-</div>
-<hr />
-<div>
-  <b>Community:</b>
-  {{#each community}}
-    <ul>
-      <li>{{name}}</li>
-      <li>{{type}}</li>
-    </ul>
-  {{/each}}
-</div>
+      </div>
+    {{/each}}
+  </div>
+
+  <div class='card m-3'>
+    <div class='row col-12 p-3 ps-5 pe-0'>
+
+      <div class='m-2 text-center'>
+        <h3>Sintax</h3>
+      </div>
+
+      {{#with syntax}}
+
+        
+          <div class='card col-2 m-2'>
+            <b>Virables:</b>
+            {{#each variables}}
+              <li><a>{{this}}</a></li>
+            {{/each}}
+          </div>
+          
+
+          <div class='card col-2 m-2'>
+            <b>Functions:</b>
+            {{#each functions}}
+              <li><a>{{this}}</a></li>
+            {{/each}}
+          </div>
+
+          <div class='card col-2 m-2'>
+            <b>Conditionals:</b>
+            {{#each conditionals}}
+              <li><a>{{this}}</a></li>
+            {{/each}}
+          </div>
+
+          <div class='card col-2 m-2'>
+            <b>Loops:</b>
+            {{#each loops}}
+              <li><a>{{this}}</a></li>
+            {{/each}}
+          </div>
+
+          <div class='card col-2 m-2'>
+            <b>Classes:</b>
+            {{#each classes}}
+              <li><a>{{this}}</a></li>
+            {{/each}}
+          </div>
+        </ul>
+      {{/with}}
+    </div>
+  </div>
+
+  <div class="card m-3">
+    <div class="m-3">
+    <b>Features:</b>
+    </div>
+    <div class="m-3">
+    {{#each features}}
+      <li>{{this}}</li>
+    {{/each}}
+    </div>
+  </div>
+
+
+  <div class="row col-12 m-3">
+
+  <div class="card col-3 m-3">
+    <div class="m-3">
+    <b>Libraries</b>
+    </div>
+    <div class="m-3">
+    {{#each libraries}}
+      <li>{{this}}</li>
+    {{/each}}
+    </div>
+  </div>
+  
+  <div class="card col-3 m-3">
+    <div  class="m-3">
+    <b>Tools:</b>
+    </div>
+    <div class="m-3">
+    {{#each tools}}
+      <li>{{this}}</li>
+    {{/each}}
+    </div>
+  </div>
+  
+  <div class="card col-3 m-3">
+    <div class="m-3">
+    <b>Community:</b>
+    </div>
+    <div class="m-3">
+    {{#each community}}
+      <ul>
+        <li>{{name}}</li>
+        <li>{{type}}</li>
+      </ul>
+    {{/each}}
+    </div>
+  </div>
+  </div>
+
+</main>
