@@ -1,0 +1,97 @@
+<main class='m-3'>
+  <div>
+    {{#with program}}
+      <div>
+        {{#with excursion}}
+          <div>
+            <h1>{{name}}</h1>
+            <em><h2>{{location.city}}
+                -
+                {{location.country}}</h2></em>
+            <a>({{date}})</a>
+            <hr />
+            <br />
+            {{#each program}}
+              <ul>
+                <li>Name: <a>{{name}}</a></li>
+                <li>Type: <a>{{type}}</a></li>
+                <li>Duration: <a>{{duration}}</a></li>
+                {{#with details}}
+                  <div>
+                    {{#with museum}}
+                      <div>
+                        <em><b>{{name}}</b></em>
+                        {{#with location}}
+                          <ul>
+                            <address>{{address}},
+                              {{city}},
+                              {{country}}</address>
+                          </ul>
+                        {{/with}}
+                        <hr />
+                        <br />
+                        {{#each exhibits}}
+                          <ul>
+                            <li>Name: <em>{{name}}</em></li>
+                            <li>{{#if artist}}Artist:
+                                <em>{{artist}}</em>{{/if}}
+                              {{#unless artist}}
+                                (-)
+                              {{/unless}}</li>
+                            <li>Description:
+                              <em>{{description}}</em></li>
+                            <li>{{#if
+                                audio_guide
+                              }}({{audio_guide}}){{/if}}</li>
+                            <br />
+                          </ul>
+                        {{/each}}
+                      </div>
+                    {{/with}}
+                    <hr />
+                    <br />
+                    {{#with guide}}
+                      <ul>
+                        <li>Name: <a>{{name}}</a></li>
+                        <li>Language:
+                          <a>{{language}}</a></li>
+                        <li>Rating: <a>{{rating}}</a></li>
+                      </ul>
+                    {{/with}}
+                  </div>
+                {{/with}}
+                <hr />
+                <br />
+                {{#with details}}
+                  <ul>
+                    {{#with venue}}
+                      <div>
+                        <h3>{{name}}</h3>
+                        {{#with location}}
+                          <div>
+                            <address>{{address}},
+                              {{city}},
+                              {{country}}</address>
+                          </div>
+                        {{/with}}
+                      </div>
+                    {{/with}}
+                    <hr />
+                    <br />
+                    {{#each performers}}
+                      <div>
+                        <li>{{name}}</li>
+                        <li>{{type}}</li>
+                      </div>
+                    {{/each}}
+                  </ul>
+                {{/with}}
+
+              </ul>
+            {{/each}}
+          </div>
+        {{/with}}
+      </div>
+    {{/with}}
+  </div>
+</main>
