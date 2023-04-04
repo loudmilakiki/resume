@@ -1,0 +1,142 @@
+<main class="m-5">
+<div>
+  <h1>{{name}}</h1>
+</div>
+<br />
+<div>
+  <a>{{birthdate}}</a>
+</div>
+<br />
+<div><address>{{birthplace}}</address></div>
+<hr />
+<br />
+<div>
+  <a>{{deathdate}}</a>
+</div>
+<br />
+<div><address>{{deathplace}}</address></div>
+<br />
+<hr />
+<div>Nationality: <a>{{nationality}}</a></div>
+<br />
+<div>Occupation: <a>{{occupation}}</a></div>
+<br />
+<div>
+  <section>
+    {{#with known_for}}
+      <b>
+        <li>Theory of Relativity</li>
+        <li>E=mc²</li>
+        <li>Photoelectric Effect</li>
+        <li> Brownian Motion</li>
+      </b>
+    {{/with}}
+  </section>
+  </div>
+  <br />
+  <div>
+    <section>
+    {{#each education}}
+      <div>{{degree}}</div>
+      <div>{{field}}</div>
+      <div>{{institution}}</div>
+      <div>{{year}}</div>
+    {{/each}}
+    </section>
+  </div>
+  <br>
+  <div>
+    <section>
+      <div><h3>Publications</h3></div>
+      {{#each notable_publications}}
+      <br>
+       <div>{{title}}</div>
+       <div>{{year}}</div>
+       <div>{{publisher}}</div>
+      {{/each}}
+    </section>
+  </div>
+  <hr>
+  <br>
+  <div>
+    <section>
+      <div><h3>Partners</h3></div>
+      {{#each partners}}
+      <br>
+       <div>{{name}}</div>
+       <div>{{relationship}}</div>
+       <div>{{years}}</div>
+      {{/each}}
+    </section>
+  </div>
+  <hr>
+  <br>
+  <div>
+    <section>
+      <div><h3>Awards</h3></div>
+    {{#each awards}}
+      <div>{{title}}</div>
+      <div>{{year}}</div>
+      <div>{{description}}</div>
+    {{/each}}
+    </section>
+  </div>
+  <br>
+  <div>
+    <section>
+      <div><b>Influences:</b></div>   
+      <ul>
+        <li>Isaac Newton</li>
+        <li>James Clerk Maxwell</li>
+        <li>Hermann Minkowski</li>
+      </ul>  
+    </section>
+  </div>
+  <br>
+  <div>
+    <section>
+     <div><b>Influenced:</b></div>
+      <ul>
+         <li>Niels Bohr</li>
+         <li>Erwin Schrödinge</li>
+         <li>Werner Heisenberg</li>
+         <li>Richard Feynman</li>
+      </ul>
+    </section>
+  </div>
+  <br>
+  <div>
+    <section>
+      <div><b>Quotes:</b></div>
+        <ul>
+           <li><p>Imagination is more important than knowledge.</p></li>
+           <li><p>I have no special talent. I am only passionately curious.</p></li>
+           <li><p>The important thing is not to stop questioning.</p></li>
+           <li><p>The most beautiful thing we can experience is the mysterious. It is the source of all true art and all science.</p></li>
+       </ul>
+    </section>
+  </div>
+  <br>
+  <div>
+    <section>
+      {{#each major_discoveries}}
+        <div>{{title}}</div>
+        <div>{{description}}</div>
+        <div>{{year}}</div>
+      {{/each}}
+    </section>
+  </div>
+  <br>
+ <div>
+  <section>
+    {{#with contributions}}
+    <div>{{title}}</div>
+    <div>{{description}}</div>
+    <div>{{year}}</div>
+    <div>{{field}}</div>
+    {{/with}}
+  </section>
+ </div>  
+</div>
+
+</main>
